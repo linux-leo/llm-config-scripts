@@ -2,7 +2,7 @@
     - sources:
         - model: nlpguy/ColorShadow-7B
           layer_range: [0, 32]
-        - model: Fredithefish/OpenZephyrChat
+        - model: Q-bert/Terminis-7B
           layer_range: [0, 32]
   merge_method: slerp
   base_model: nlpguy/ColorShadow-7B
