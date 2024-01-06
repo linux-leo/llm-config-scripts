@@ -1,17 +1,11 @@
 models:
-  - model: teknium/OpenHermes-2.5-Mistral-7B
-  - model: simonveitner/Math-OpenHermes-2.5-Mistral-7B
+  - model: openaccess-ai-collective/DPOpenHermes-7B-v2
+  - model: ./merged
     parameters:
-      weight: 0.25
-  - model: openaccess-ai-collective/dpopenhermes-alpha-v0
+      weight: 0.5
+  - model: SanjiWatsuki/Lelantos-7B
     parameters:
-      weight: 0.25
-  - model: mlabonne/NeuralHermes-2.5-Mistral-7B
-    parameters:
-      weight: 0.25
-  - model: mlabonne/NeuralHermes-2.5-Mistral-7B-laser
-    parameters:
-      weight: 0.25
-base_model: teknium/OpenHermes-2.5-Mistral-7B
+      weight: 0.5
+base_model: openaccess-ai-collective/DPOpenHermes-7B-v2
 merge_method: task_arithmetic
 dtype: bfloat16
