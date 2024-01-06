@@ -1,6 +1,6 @@
 models:
   - model: openaccess-ai-collective/DPOpenHermes-7B-v2
-  - model: ./merged2
+  - model: ./merged
     parameters:
       weight: 0.5
   - model: SanjiWatsuki/Lelantos-7B
