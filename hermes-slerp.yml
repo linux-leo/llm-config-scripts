@@ -1,9 +1,9 @@
 models:
-  - model: simonveitner/Math-OpenHermes-2.5-Mistral-7B
-  - model: openaccess-ai-collective/dpopenhermes-alpha-v0
+  - model: openaccess-ai-collective/DPOpenHermes-7B-v2
+  - model: nlpguy/Hermes-low-tune-2
 merge_method: slerp
-base_model: simonveitner/Math-OpenHermes-2.5-Mistral-7B
+base_model: openaccess-ai-collective/DPOpenHermes-7B-v2
 parameters:
   t:
-    - value: 0.5
-dtype: float16
+    - value: 0.25
+dtype: bfloat16
