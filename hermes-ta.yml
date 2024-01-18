@@ -1,15 +1,15 @@
 models:
   - model: teknium/OpenHermes-2.5-Mistral-7B
-  - model: simonveitner/Math-OpenHermes-2.5-Mistral-7B
+  - model: nlpguy/Hermes-low-tune-2
     parameters:
       weight: 0.20
-  - model: openaccess-ai-collective/dpopenhermes-alpha-v0
+  - model: beowolx/MistralHermes-CodePro-7B-v1
     parameters:
       weight: 0.20
   - model: flemmingmiguel/Mistrality-7B
     parameters:
       weight: 0.20
-  - model: mlabonne/NeuralHermes-2.5-Mistral-7B-laser
+  - model: charlesdedampierre/TopicNeuralHermes-2.5-Mistral-7B
     parameters:
       weight: 0.20
   - model: openaccess-ai-collective/openhermes-2_5-dpo-no-robots
