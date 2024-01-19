@@ -1,9 +1,9 @@
 models:
-  - model: openaccess-ai-collective/DPOpenHermes-7B-v2
-  - model: nlpguy/Hermes-low-tune-2
+  - model: Azazelle/Yuna-7b-Merge
+  - model: nlpguy/Hermes-low-tune-3.1
 merge_method: slerp
-base_model: openaccess-ai-collective/DPOpenHermes-7B-v2
+base_model: Azazelle/Yuna-7b-Merge
 parameters:
   t:
-    - value: 0.25
+    - value: 0.5
 dtype: bfloat16
