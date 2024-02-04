@@ -1,13 +1,9 @@
 models:
-  - model: Azazelle/Yuna-7b-Merge
-  - model: nlpguy/Hermes-low-tune-3.1
+  - model: jsfs11/TurdusTrixBeagle-DARETIES-7B
+  - model: senseable/garten2-7b
 merge_method: slerp
-base_model: Azazelle/Yuna-7b-Merge
+base_model: senseable/garten2-7b
 parameters:
   t:
-    - filter: self_attn
-      value: [0, 0.25, 0.5, 0.75, 1]
-    - filter: mlp
-      value: [1, 0.75, 0.5, 0.25, 0]
-    - value: 0.5 # fallback for rest of tensors
-dtype: bfloat16
+    - value: [0, 0.3, 0.5, 0.7, 1]
+dtype: float16
