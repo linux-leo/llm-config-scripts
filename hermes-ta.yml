@@ -1,20 +1,20 @@
 models:
-  - model: teknium/OpenHermes-2.5-Mistral-7B
-  - model: nlpguy/Hermes-low-tune-2
+  - model: mistralai/Mistral-7B-v0.1
+  - model: flemmingmiguel/MBX-7B-v3
     parameters:
       weight: 0.20
-  - model: beowolx/MistralHermes-CodePro-7B-v1
+  - model: samir-fama/FernandoGPT-v1
     parameters:
       weight: 0.20
-  - model: flemmingmiguel/Mistrality-7B
+  - model: FelixChao/Severus-7B
     parameters:
       weight: 0.20
-  - model: charlesdedampierre/TopicNeuralHermes-2.5-Mistral-7B
+  - model: jsfs11/TurdusTrixBeagle-DARETIES-7B
     parameters:
       weight: 0.20
-  - model: openaccess-ai-collective/openhermes-2_5-dpo-no-robots
+  - model: senseable/garten2-7b
     parameters:
       weight: 0.20
-base_model: teknium/OpenHermes-2.5-Mistral-7B
-merge_method: task_arithmetic
+base_model: mistralai/Mistral-7B-v0.1
+merge_method: dare_linear
 dtype: bfloat16
