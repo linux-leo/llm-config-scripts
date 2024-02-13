@@ -1,13 +1,16 @@
-models:
-  - model: eren23/dpo-binarized-NeutrixOmnibe-7B
-  - model: Gille/StrangeMerges_21-7B-slerp
+slices:
+  - sources:
+      - model: liminerity/Omningotex-7b-slerp
+        layer_range: [0, 32]
+      - model: nlpguy/AlloyIngot
+        layer_range: [0, 32]
 merge_method: slerp
-base_model: Gille/StrangeMerges_21-7B-slerp
+base_model: liminerity/Omningotex-7b-slerp
 parameters:
   t:
     - filter: self_attn
-      value: [0, 0.3, 0.5, 0.7, 1]
+      value: [0, 0.5, 0.3, 0.7, 1]
     - filter: mlp
-      value: [1, 0.7, 0.5, 0.3, 0]
+      value: [1, 0.5, 0.7, 0.3, 0]
     - value: 0.5
 dtype: bfloat16
