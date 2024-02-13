@@ -1,9 +1,12 @@
 models:
-  - model: jsfs11/TurdusTrixBeagle-DARETIES-7B
-  - model: senseable/garten2-7b
+  - model: eren23/dpo-binarized-NeutrixOmnibe-7B
+  - model: Gille/StrangeMerges_21-7B-slerp
 merge_method: slerp
-base_model: senseable/garten2-7b
+base_model: Gille/StrangeMerges_21-7B-slerp
 parameters:
   t:
+    - filter: self_attn
     - value: [0, 0.3, 0.5, 0.7, 1]
-dtype: float16
+    - filter: mlp
+    - value: [1, 0.7, 0.5, 0.3, 0]
+dtype: bfloat16
