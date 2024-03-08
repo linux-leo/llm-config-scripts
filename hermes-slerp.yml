@@ -1,16 +1,11 @@
-slices:
-  - sources:
-      - model: Gille/StrangeMerges_20-7B-slerp
-        layer_range: [0, 32]
-      - model: eren23/ogno-monarch-jaskier-merge-7b
-        layer_range: [0, 32]
-merge_method: slerp
-base_model: Gille/StrangeMerges_20-7B-slerp
-parameters:
-  t:
-    - filter: self_attn
-      value: [0.1, 0.3, 0.5, 0.7, 0.9]
-    - filter: mlp
-      value: [0.9, 0.7, 0.5, 0.3, 0.1]
-    - value: 0.45
+merge_method: task_swapping_ties
+base_model: ammarali32/multi_verse_model
+models:
+  - model: yam-peleg/Experiment26-7B
+    parameters:
+      weight: 0.4
+      diagonal_offset: 2
+  - model: ammarali32/multi_verse_model
+    parameters:
+      weight: 0.6
 dtype: bfloat16
