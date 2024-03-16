@@ -1,11 +1,13 @@
-merge_method: task_swapping_ties
-base_model: ammarali32/multi_verse_model
 models:
-  - model: yam-peleg/Experiment26-7B
-    parameters:
-      weight: 0.4
-      diagonal_offset: 2
-  - model: ammarali32/multi_verse_model
-    parameters:
-      weight: 0.6
-dtype: bfloat16
+    - model: liminerity/M7-7b
+    - model: chihoonlee10/T3Q-Mistral-Orca-Math-DPO
+merge_method: slerp
+base_model: chihoonlee10/T3Q-Mistral-Orca-Math-DPO
+parameters:
+  t:
+    - filter: self_attn
+      value: [0, 0.5, 0.3, 0.7, 1]
+    - filter: mlp
+      value: [1, 0.5, 0.7, 0.3, 0]
+    - value: 0.4 # fallback for rest of tensors
+dtype: float16
