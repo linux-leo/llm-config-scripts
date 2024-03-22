@@ -1,8 +1,8 @@
 models:
-    - model: liminerity/M7-7b
-    - model: chihoonlee10/T3Q-Mistral-Orca-Math-DPO
+    - model: MatthieuJ/Jason1903_SLERP
+    - model: nlpguy/T3QM7
 merge_method: slerp
-base_model: chihoonlee10/T3Q-Mistral-Orca-Math-DPO
+base_model: nlpguy/T3QM7
 parameters:
   t:
     - filter: self_attn
