@@ -1,13 +1,13 @@
 models:
-    - model: MatthieuJ/Jason1903_SLERP
-    - model: nlpguy/T3QM7
+    - model: Gille/StrangeMerges_32-7B-slerp
+    - model: yam-peleg/Experiment26-7B
 merge_method: slerp
-base_model: nlpguy/T3QM7
+base_model: yam-peleg/Experiment26-7B
 parameters:
   t:
     - filter: self_attn
       value: [0, 0.5, 0.3, 0.7, 1]
     - filter: mlp
       value: [1, 0.5, 0.7, 0.3, 0]
-    - value: 0.4 # fallback for rest of tensors
+    - value: 0.5 # fallback for rest of tensors
 dtype: float16
