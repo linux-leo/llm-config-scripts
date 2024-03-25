@@ -1,13 +1,11 @@
 models:
-    - model: nlpguy/MergeX
-    - model: nlpguy/T3QM7
-merge_method: slerp
-base_model: nlpguy/T3QM7
+    - model: froggeric/WestLake-10.7B-v2
+      parameters:
+        weight: [0.3, 0.5, 0.7, 0.5, 0.7, 1, 0.5]
+    - model: bn22/Nous-Hermes-2-SOLAR-10.7B-MISALIGNED
+      parameters:
+        weight: [0.7, 0.5, 0.3, 0.5, 0.3, 0, 0.5]
+merge_method: linear
 parameters:
-  t:
-    - filter: self_attn
-      value: [0, 0.5, 0.3, 0.7, 1]
-    - filter: mlp
-      value: [1, 0.5, 0.7, 0.3, 0]
-    - value: 0.4 # fallback for rest of tensors
+  normalize: false
 dtype: float16
