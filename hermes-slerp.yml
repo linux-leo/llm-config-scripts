@@ -1,11 +1,7 @@
 models:
-    - model: froggeric/WestLake-10.7B-v2
-      parameters:
-        weight: [0.3, 0.5, 0.7, 0.5, 0.7, 1, 0.5]
-    - model: bn22/Nous-Hermes-2-SOLAR-10.7B-MISALIGNED
-      parameters:
-        weight: [0.7, 0.5, 0.3, 0.5, 0.3, 0, 0.5]
-merge_method: linear
-parameters:
-  normalize: false
-dtype: float16
+  - model: openchat/openchat_3.5
+  - model: FuseAI/OpenChat-3.5-7B-Mixtral
+  - model: FuseAI/OpenChat-3.5-7B-Solar
+merge_method: model_stock
+base_model: openchat/openchat_3.5
+dtype: bfloat16
