@@ -1,9 +1,9 @@
 merge_method: model_stock
 base_model: mistralai/Mistral-7B-v0.1
 models:
-  - model: JunchengXie/Mistral-7B-v0.1-raw-80k
-  - model: JunchengXie/Mistral-7B-v0.1-gpt-4-60k
-  - model: JunchengXie/Mistral-7B-v0.1-gpt-4-40k
-  - model: JunchengXie/Mistral-7B-v0.1-gpt-4-20k
+  - model: mistralai/Mistral-7B-v0.1+JunchengXie/Mistral-7B-v0.1-raw-80k
+  - model: mistralai/Mistral-7B-v0.1+JunchengXie/Mistral-7B-v0.1-gpt-4-60k
+  - model: mistralai/Mistral-7B-v0.1+JunchengXie/Mistral-7B-v0.1-gpt-4-40k
+  - model: mistralai/Mistral-7B-v0.1+JunchengXie/Mistral-7B-v0.1-gpt-4-20k
   - model: mistralai/Mistral-7B-v0.1
 dtype: bfloat16
