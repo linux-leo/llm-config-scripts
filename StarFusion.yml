@@ -1,6 +1,7 @@
 merge_method: model_stock
-base_model: openchat/openchat_3.5
+base_model: berkeley-nest/Starling-LM-7B-alpha
 models:
-  - model: openchat/openchat_3.5+JunchengXie/Starling-LM-7B-alpha-gpt-4-80k+JunchengXie/Mistral-7B-v0.1-raw-80k+JCX-kcuf/openchat_3.5-gpt-4-80k
+  - model: maywell/PiVoT-0.1-Starling-LM-RP
+  - model: chujiezheng/Starling-LM-7B-alpha-ExPO
   - model: berkeley-nest/Starling-LM-7B-alpha+JunchengXie/Starling-LM-7B-alpha-gpt-4-80k+JunchengXie/Mistral-7B-v0.1-raw-80k+JCX-kcuf/openchat_3.5-gpt-4-80k
 dtype: bfloat16
