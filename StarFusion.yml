@@ -1,7 +1,9 @@
-models:
-  - model: openchat/openchat_3.5
-  - model: FuseAI/OpenChat-3.5-7B-Mixtral
-  - model: FuseAI/OpenChat-3.5-7B-Solar
 merge_method: model_stock
-base_model: openchat/openchat_3.5
+base_model: mistralai/Mistral-7B-v0.1
+models:
+  - model: JunchengXie/Mistral-7B-v0.1-raw-80k
+  - model: JunchengXie/Mistral-7B-v0.1-gpt-4-60k
+  - model: JunchengXie/Mistral-7B-v0.1-gpt-4-40k
+  - model: JunchengXie/Mistral-7B-v0.1-gpt-4-20k
+  - model: mistralai/Mistral-7B-v0.1
 dtype: bfloat16
