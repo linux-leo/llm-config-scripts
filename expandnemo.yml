@@ -1,0 +1,39 @@
+slices:
+  - sources:
+    - model: mistralai/Mistral-Nemo-Instruct-2407
+      layer_range: [0, 30]
+  - sources:
+    - model: mistralai/Mistral-Nemo-Instruct-2407
+      layer_range: [10, 30]
+        parameters:
+          scale:
+          - filter: o_proj
+            value: 0.0
+          - filter: down_proj
+            value: 0.0
+          - value: 1.0
+  - sources:
+    - model: mistralai/Mistral-Nemo-Instruct-2407
+      layer_range: [15, 30]
+        parameters:
+          scale:
+          - filter: o_proj
+            value: 0.0
+          - filter: down_proj
+            value: 0.0
+          - value: 1.0
+  - sources:
+    - model: mistralai/Mistral-Nemo-Instruct-2407
+      layer_range: [10, 30]
+        parameters:
+          scale:
+          - filter: o_proj
+            value: 0.0
+          - filter: down_proj
+            value: 0.0
+          - value: 1.0
+  - sources:
+    - model: mistralai/Mistral-Nemo-Instruct-2407
+      layer_range: [30, 40]
+merge_method: passthrough
+dtype: bfloat16
