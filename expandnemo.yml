@@ -1,10 +1,25 @@
 slices:
   - sources:
-    - model: mistralai/Mistral-Nemo-Instruct-2407
-      layer_range: [0, 30]
+    - model: NeverSleep/Lumimaid-v0.2-12B
+      layer_range: [0, 10]
   - sources:
-    - model: mistralai/Mistral-Nemo-Instruct-2407
-      layer_range: [10, 30]
+    - model: nothingiisreal/MN-12B-Celeste-V1.9
+      layer_range: [10, 20]
+  - sources:
+    - model: anthracite-org/magnum-12b-v2.5-kto
+      layer_range: [20, 30]
+  - sources:
+    - model: Sao10K/MN-12B-Lyra-v2a1
+      layer_range: [10, 20]
+        parameters:
+          scale:
+          - filter: o_proj
+            value: 0.0
+          - filter: down_proj
+            value: 0.0
+          - value: 1.0
+    - model: ./merged
+      layer_range: [20, 30]
         parameters:
           scale:
           - filter: o_proj
