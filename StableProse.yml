@@ -1,0 +1,7 @@
+models:
+  - model: mistralai/Mistral-Nemo-Base-2407
+  - model: Undi95/LocalC-12B-e2.0
+  - model: shuttleai/shuttle-2.5-mini
+merge_method: model_stock
+base_model: mistralai/Mistral-Nemo-Base-2407
+dtype: bfloat16
