@@ -9,23 +9,23 @@ models:
       density: 0.4
   - model: ./merged
     parameters:
-      weight: 0.15
+      weight: 0.154
       density: 0.5
   - model: Sao10K/MN-12B-Lyra-v2a1
     parameters:
-      weight: 0.18
+      weight: 0.184
       density: 0.62
   - model: anthracite-org/magnum-12b-v2.5-kto
     parameters:
-      weight: 0.17
+      weight: 0.174
       density: 0.63
   - model: nothingiisreal/MN-12B-Celeste-V1.9
     parameters:
-      weight: 0.17
+      weight: 0.174
       density: 0.64
   - model: NeverSleep/Lumimaid-v0.2-12B
     parameters:
-      weight: 0.16
+      weight: 0.164
       density: 0.66
 merge_method: della
 base_model: mistralai/Mistral-Nemo-Base-2407
