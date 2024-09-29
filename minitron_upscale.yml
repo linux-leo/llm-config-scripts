@@ -37,4 +37,4 @@ slices:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
       layer_range: [32, 40]
 merge_method: passthrough
-dtype: float16
+dtype: bfloat16
