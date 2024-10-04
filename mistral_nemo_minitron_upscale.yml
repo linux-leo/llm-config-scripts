@@ -55,14 +55,6 @@ slices:
           scale:
             - filter: input_layernorm
               value: 0.75
-            - value: 1
-  - sources:
-    - model: nvidia/Mistral-NeMo-Minitron-8B-Base
-      layer_range: [25, 32]
-      parameters:
-          scale:
-            - filter: input_layernorm
-              value: 0.75
             - filter: v_proj
               value: 0.5
             - filter: post_attention_layernorm
@@ -70,6 +62,6 @@ slices:
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
-      layer_range: [32, 40]
+      layer_range: [25, 40]
 merge_method: passthrough
 dtype: bfloat16
