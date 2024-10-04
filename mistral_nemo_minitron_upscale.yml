@@ -7,24 +7,20 @@ slices:
       layer_range: [8, 16]
       parameters:
           scale:
-            - filter: q_proj
-              value: 0.85355339059 #
-            - filter: k_proj       # 0.5 + 0.5/sqrt(2)
-              value: 0.85355339059 #
+            - filter: input_layernorm
+              value: 0.75
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
       layer_range: [8, 16]
       parameters:
           scale:
-            - filter: o_proj
+            - filter: input_layernorm
+              value: 0.75
+            - filter: v_proj
               value: 0.5
-            - filter: down_proj
+            - filter: post_attention_layernorm
               value: 0.5
-            - filter: q_proj
-              value: 0.85355339059 #
-            - filter: k_proj       # 0.5 + 0.5/sqrt(2)
-              value: 0.85355339059 #
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
@@ -34,24 +30,20 @@ slices:
       layer_range: [17, 24]
       parameters:
           scale:
-            - filter: q_proj
-              value: 0.85355339059 #
-            - filter: k_proj       # 0.5 + 0.5/sqrt(2)
-              value: 0.85355339059 #
+            - filter: input_layernorm
+              value: 0.75
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
       layer_range: [17, 24]
       parameters:
           scale:
-            - filter: o_proj
+            - filter: input_layernorm
+              value: 0.75
+            - filter: v_proj
               value: 0.5
-            - filter: down_proj
+            - filter: post_attention_layernorm
               value: 0.5
-            - filter: q_proj
-              value: 0.85355339059 #
-            - filter: k_proj       # 0.5 + 0.5/sqrt(2)
-              value: 0.85355339059 #
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
@@ -61,24 +53,20 @@ slices:
       layer_range: [25, 32]
       parameters:
           scale:
-            - filter: q_proj
-              value: 0.85355339059 #
-            - filter: k_proj       # 0.5 + 0.5/sqrt(2)
-              value: 0.85355339059 #
+            - filter: input_layernorm
+              value: 0.75
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
       layer_range: [25, 32]
       parameters:
           scale:
-            - filter: o_proj
+            - filter: input_layernorm
+              value: 0.75
+            - filter: v_proj
               value: 0.5
-            - filter: down_proj
+            - filter: post_attention_layernorm
               value: 0.5
-            - filter: q_proj
-              value: 0.85355339059 #
-            - filter: k_proj       # 0.5 + 0.5/sqrt(2)
-              value: 0.85355339059 #
             - value: 1
   - sources:
     - model: nvidia/Mistral-NeMo-Minitron-8B-Base
